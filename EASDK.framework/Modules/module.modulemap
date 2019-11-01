@@ -1,0 +1,6 @@
+framework module EASDK {
+  umbrella header "EASDK.h"
+
+  export *
+  module * { export * }
+}

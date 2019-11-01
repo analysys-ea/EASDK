@@ -1,0 +1,66 @@
+{
+    "code":"0",
+    "message":"success",
+    "version":"1",
+    "total":20,
+    "data":[
+        {
+            "id":"21",
+            "style":3,
+            "type":1,
+            "count":0,
+            "event":{
+                "xwhat":"userLogin",
+                "xcontext":{
+                    "$os":"iOS"
+                },
+                "xwho":"C304AD59-8627-4F76-890E-DEBECED950D7"
+            },
+        "picture":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571049224021&di=75ccb12107b27f7566367f4505fa9c4d&imgtype=0&src=http%3A%2F%2Fimg05.jdzj.com%2Foledit%2FUploadFile%2Fnews2014c%2Fimage%2F20140724%2F20140724095878967896.jpg",
+            "createTime":"2019-09-04 00:00:00",
+            "changeTime":"2019-09-04 00:00:00",
+            "startTime":"2019-09-04 00:00:00",
+            "endTime":"2019-09-07 00:00:00",
+            "clickEvent":"analysys://android/open_webview?id=https://ark.analysys.cn",
+            "title":{
+                "text":"温馨提示",
+                "background":"#ffffff",
+                "size":"36pd",
+                "color":"#000000"
+            },
+            "content":{
+                "text":"开头提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨结尾",
+                "background":"#ffffff",
+                "size":"28pd",
+                "color":"#383838"
+            },
+            "buttonLeft":{
+                "text":"取消",
+                "background":"#f4f4f4",
+                "size":"36pd",
+                "clickEvent":"http://www.baidu.com",
+                "color":"#383838"
+            },
+            "buttonMiddle":{
+                "text":"确定",
+                "background":"#f4f4f4",
+                "size":"36pd",
+                "clickEvent":"http://www.baidu.com",
+                "color":"#383838"
+            },
+            "buttonRight":{
+                "text":"确定",
+                "background":"#f4f4f4",
+                "size":"36pd",
+                "clickEvent":"http://www.baidu.com",
+                "color":"#383838"
+            },
+            "preEvent":{
+                "xwhat":"$startup",
+                "xcontext":{
+                    "$os":"iOS"
+                }
+            }
+        }
+    ]
+}
