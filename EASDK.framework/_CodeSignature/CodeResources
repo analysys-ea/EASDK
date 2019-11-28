@@ -16,37 +16,17 @@
 		<data>
 		so3aInA5Cjg1Vwybfr/f69pbu64=
 		</data>
-		<key>EASDK.bundle/ea_webview_loadingError@2x.png</key>
+		<key>Headers/AnalysysEaConfig.h</key>
 		<data>
-		tw5TzuaGeccwh5ZQQnLn+J0NYvU=
+		dTo+OpWa98yJXq9TR2u6G/rZuSg=
 		</data>
-		<key>EASDK.bundle/testData.json</key>
+		<key>Headers/AnalysysEaManager.h</key>
 		<data>
-		OcwI7zdAnUe1KMs1ih4FMsHc0pA=
-		</data>
-		<key>Headers/EADefine.h</key>
-		<data>
-		THqWULxJNDPloAAKlJhks+jbido=
-		</data>
-		<key>Headers/EASDK.h</key>
-		<data>
-		w0JEWYbHwpHoG3M9HKTPchzpqas=
-		</data>
-		<key>Headers/EASDKConfiguration.h</key>
-		<data>
-		q9nyTvCt8+/6J6z+B2dPR8X3LVw=
+		aJxK+EGGnz5r4+k2Ofb3nWtgdXw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-<<<<<<< HEAD
-		9uHhaHhyK6L0KXVJRGYxXzLpIyI=
-=======
-		BypIF7h/P2b3kC3UVRYDa57iGOU=
->>>>>>> dev
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		ScHcPIj5XbZ/kBvp6OuU/R5DwLs=
+		uIrpuQtNzRcIHpL0IZDZ0s6yHtU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -84,70 +64,26 @@
 			kjFTn7MeiJvy85SPl5kvKwKHf/vPfOAlPFKT+BKmwQY=
 			</data>
 		</dict>
-		<key>EASDK.bundle/ea_webview_loadingError@2x.png</key>
+		<key>Headers/AnalysysEaConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tw5TzuaGeccwh5ZQQnLn+J0NYvU=
+			dTo+OpWa98yJXq9TR2u6G/rZuSg=
 			</data>
 			<key>hash2</key>
 			<data>
-			GkPfma3o0tfc75PWoA9Dz5UbQwWb44D9BvkFCvuUVn0=
+			RH6/RUvp+1XzHCPWRH3fnrG782GRoRkCqYAfP/e5NK0=
 			</data>
 		</dict>
-		<key>EASDK.bundle/testData.json</key>
+		<key>Headers/AnalysysEaManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OcwI7zdAnUe1KMs1ih4FMsHc0pA=
+			aJxK+EGGnz5r4+k2Ofb3nWtgdXw=
 			</data>
 			<key>hash2</key>
 			<data>
-			FqgOVcFMUooxe4pHofu+cZftg7pIniLQDLQ18Gcwx8U=
-			</data>
-		</dict>
-		<key>Headers/EADefine.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			THqWULxJNDPloAAKlJhks+jbido=
-			</data>
-			<key>hash2</key>
-			<data>
-			cfx3TSHIH08GPSwyJL/heHhRR9UodSeJDgqKX330mXM=
-			</data>
-		</dict>
-		<key>Headers/EASDK.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			w0JEWYbHwpHoG3M9HKTPchzpqas=
-			</data>
-			<key>hash2</key>
-			<data>
-			xdz9/EZeJ3cUpG5111EWrD4uwXh/GZSOH/oDK6TuWeY=
-			</data>
-		</dict>
-		<key>Headers/EASDKConfiguration.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q9nyTvCt8+/6J6z+B2dPR8X3LVw=
-			</data>
-			<key>hash2</key>
-			<data>
-			4fwWgynA+/paEtii5Q7I8zszTp+ZEkHchSLBl/PWdPU=
-			</data>
-		</dict>
-		<key>Modules/module.modulemap</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ScHcPIj5XbZ/kBvp6OuU/R5DwLs=
-			</data>
-			<key>hash2</key>
-			<data>
-			epF0+hRaVQ2sTwXBA4GoUmZEKbGDxQGteoEoUON0jN4=
+			KsN3cutxsjAp79GpBxfZwAvNV6m5WsT11y73lljuCjY=
 			</data>
 		</dict>
 	</dict>
