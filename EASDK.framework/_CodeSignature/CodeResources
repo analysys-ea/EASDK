@@ -10,11 +10,19 @@
 		</data>
 		<key>EASDK.bundle/ea_webview_back@2x.png</key>
 		<data>
-		+Zl+XuvtzOCSeylBdxf7psGsOtI=
+		DREef3FXcpg8E3im+yOtqMdY3Qg=
+		</data>
+		<key>EASDK.bundle/ea_webview_back@3x.png</key>
+		<data>
+		np8nyk+yia+vWbHCD0GUluHjMV4=
 		</data>
 		<key>EASDK.bundle/ea_webview_close@2x.png</key>
 		<data>
-		so3aInA5Cjg1Vwybfr/f69pbu64=
+		QzXSATTsQFuoze9eZsgiLTogMtA=
+		</data>
+		<key>EASDK.bundle/ea_webview_close@3x.png</key>
+		<data>
+		wsD2afbPAaPb3smUSe4sksgLLsk=
 		</data>
 		<key>Headers/AnalysysEaConfig.h</key>
 		<data>
@@ -26,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8rrM8S+zm88/PS6t7mSWutmtTlM=
+		JLrPfw43a7gpdS2Y8WMGfY5zrNM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -46,22 +54,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+Zl+XuvtzOCSeylBdxf7psGsOtI=
+			DREef3FXcpg8E3im+yOtqMdY3Qg=
 			</data>
 			<key>hash2</key>
 			<data>
-			GNqf/G0rpr7n6Vhr26Zt2wr0CEwj9ebATbBhLYd6xQA=
+			vrV4oh1ek2P2Ydjmyx83ryq6rbJdWP5BGpc+2tjibWQ=
+			</data>
+		</dict>
+		<key>EASDK.bundle/ea_webview_back@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			np8nyk+yia+vWbHCD0GUluHjMV4=
+			</data>
+			<key>hash2</key>
+			<data>
+			+lTR0Ka5sT2a0NZXML/N3dDxExW+dPS8oprx0FIuBlc=
 			</data>
 		</dict>
 		<key>EASDK.bundle/ea_webview_close@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			so3aInA5Cjg1Vwybfr/f69pbu64=
+			QzXSATTsQFuoze9eZsgiLTogMtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			kjFTn7MeiJvy85SPl5kvKwKHf/vPfOAlPFKT+BKmwQY=
+			ceJ/x0RftuD4jQOCv3yRw0zP9jLE0mhJM4e63CfuseE=
+			</data>
+		</dict>
+		<key>EASDK.bundle/ea_webview_close@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wsD2afbPAaPb3smUSe4sksgLLsk=
+			</data>
+			<key>hash2</key>
+			<data>
+			/7AW+XEr5Ezh2g5n2CWwo70QuYn/9F9A0Roqt3y4Td4=
 			</data>
 		</dict>
 		<key>Headers/AnalysysEaConfig.h</key>
