@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 基础功能
 
-/// 获取EASDKManager单例对象
+/// 获取事件监听对象
 + (id)getObserverListener;
 
 /// 启动SDK
@@ -34,6 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param type 推送消息事件类型，到达/点击
 /// @param msg 推送消息
 + (void)pushTrack:(PushEventType)type msg:(NSDictionary *)msg;
+
+#pragma mark - 标签别名
+
+/// 显示别名标签
++ (void)showTag;
+
+/// 隐藏别名标签
++ (void)hideTag;
 
 @end
 
