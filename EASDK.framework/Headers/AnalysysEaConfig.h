@@ -23,6 +23,12 @@ typedef NS_ENUM(NSUInteger, PushEventType) {
     PUSH_CLICK    // 点击推送消息
 };
 
+/// 活动数据拉取方式
+typedef NS_ENUM(NSUInteger, DataFetchType) {
+    DATA_FETCH_EACH_DAY,  // 每天拉取一次数据
+    DATA_FETCH_EACH_TIME, // 每次启动拉取一次数据
+};
+
 @interface AnalysysEaConfig : NSObject
 
 + (instancetype)defaultConfig;
@@ -31,6 +37,9 @@ typedef NS_ENUM(NSUInteger, PushEventType) {
 @property (nonatomic, copy) NSString *appKey;
 /// SDK 运行环境，默认线上环境
 @property (nonatomic, assign) EnvType envType;
+/// 活动数据拉取方式
+@property (nonatomic, assign) DataFetchType dataFetchType;
+
 
 @end
 
