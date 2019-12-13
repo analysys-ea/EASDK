@@ -16,6 +16,14 @@
 		<data>
 		IWaih9QgPywkF3p5wTyxBercH40=
 		</data>
+		<key>EASDK.bundle/ea_submit_fail@2x.png</key>
+		<data>
+		CGxTk2vQiVgIYbOCAHhhW8jNvwE=
+		</data>
+		<key>EASDK.bundle/ea_submit_fail@3x.png</key>
+		<data>
+		IopH++Oyz6kio0e+TjAjFmwlIvo=
+		</data>
 		<key>EASDK.bundle/ea_submit_success@2x.png</key>
 		<data>
 		M0p1IDYsrX9p44Lf3nHZyjNUOzk=
@@ -58,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tpA800CBLsW6MORTGT3NlsEgsrI=
+		grdfQW7n6yXwwyeYEq8+5r1DCNI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -94,6 +102,28 @@
 			<key>hash2</key>
 			<data>
 			LXuaxlprHfeKnkn9szqJY8ZtN73LU+83E8TASGpcvpA=
+			</data>
+		</dict>
+		<key>EASDK.bundle/ea_submit_fail@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CGxTk2vQiVgIYbOCAHhhW8jNvwE=
+			</data>
+			<key>hash2</key>
+			<data>
+			/yKCyZWfCZKbUmCCc60zyLMvR55Vdwkw+8vcJ3JwlBA=
+			</data>
+		</dict>
+		<key>EASDK.bundle/ea_submit_fail@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IopH++Oyz6kio0e+TjAjFmwlIvo=
+			</data>
+			<key>hash2</key>
+			<data>
+			l70bI4h2g4NeJsWTFU/4waySbuWlZZ+EPQW2wc8SWWA=
 			</data>
 		</dict>
 		<key>EASDK.bundle/ea_submit_success@2x.png</key>
