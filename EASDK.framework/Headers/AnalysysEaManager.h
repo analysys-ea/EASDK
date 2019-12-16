@@ -15,18 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 基础功能
 
-/// 获取事件监听对象
-+ (id)getObserverListener;
-
 /// 启动SDK
 /// @param config 配置信息
 + (void)startWithConfig:(AnalysysEaConfig *)config;
-
-#pragma mark - 页面采集
-
-/// 设置页面自动收集信息
-/// @param autoCollect 是否收集页面信息，默认为 YES ，将会收集自定义controller 相关信息（比如页面名称等），NO 将不收集
-+ (void)setAutoCollectPage:(BOOL)autoCollect;
 
 #pragma mark - 推送
 
@@ -38,10 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 标签别名
 
 /// 显示别名标签
-+ (void)showTag;
++ (void)showAliasTag;
 
 /// 隐藏别名标签
-+ (void)hideTag;
++ (void)hideAliasTag;
 
 @end
 
