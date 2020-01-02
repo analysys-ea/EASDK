@@ -1,5 +1,4 @@
-#
-iOS SDK
+# iOS SDK
 
 * iOS 常见问题
 
