@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <EASDK/AnalysysEaConfig.h>
+#import "AnalysysEaConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

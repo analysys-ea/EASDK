@@ -62,11 +62,15 @@
 		</data>
 		<key>Headers/AnalysysEaManager.h</key>
 		<data>
-		r4BlUDi7JCDAh1pVeK72ka0VgCc=
+		dpg5E6O5zMafaQrvRZ/+XGHxBDw=
+		</data>
+		<key>Headers/EADefine.h</key>
+		<data>
+		2eiKDtB0lBNQWwXVkZJHNAOPCow=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		w6C9NBohABtNZbzMgQybgsul84E=
+		jr1w1jJmIEIuB2GeANyc4IiVm3I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -229,11 +233,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r4BlUDi7JCDAh1pVeK72ka0VgCc=
+			dpg5E6O5zMafaQrvRZ/+XGHxBDw=
 			</data>
 			<key>hash2</key>
 			<data>
-			xAb1im3HcTMKGXieWmoIRPkVTtLW9RgYCb8J/sqVQEI=
+			jp9j6rgjiQ5tMM3F70nRNsIFIeFqkxZ7TH/XesaWs08=
+			</data>
+		</dict>
+		<key>Headers/EADefine.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2eiKDtB0lBNQWwXVkZJHNAOPCow=
+			</data>
+			<key>hash2</key>
+			<data>
+			iHlFXdzrG05g9yr5SzNiwkpqHUOKOyUPTivOysACDz4=
 			</data>
 		</dict>
 	</dict>
