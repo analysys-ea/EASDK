@@ -39,13 +39,13 @@ typedef NS_ENUM(NSUInteger, PushEventType) {
 /// 获取 AnalysysEaConfig 对象唯一实例，建议使用此单例方法
 + (instancetype)defaultConfig;
 
-/// 初始化时传入的 appKey ，由创建项目时自动生成
+/// 初始化时传入的 appKey ，由创建项目时自动生成，必填
 @property (nonatomic, copy) NSString *appKey;
-/// SDK 运行环境，默认为线上环境
+/// SDK 运行环境，默认为线上环境，非必填
 @property (nonatomic, assign) EnvType envType;
-/// 指定输出日志类型
+/// 指定输出日志类型，非必填
 @property (nonatomic, assign) LogLevel logLevelType;
-/// app 创建的 App Groups ID
+/// app 创建的 App Groups ID，必填
 @property (nonatomic, copy) NSString *applicationGroupIdentifier;
 
 @end

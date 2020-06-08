@@ -2,7 +2,7 @@
 
 * iOS 常见问题
 
-* iOS 客户端 SDK 下载：[动态库](https://github.com/analysys-ea/EASDK)、[静态库](https://github.com/analysys-ea/EASDK-StaticLib)
+* iOS 客户端 SDK 下载：[AnalysysEasyTouch](https://github.com/analysys-ea/EASDK)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### 组成
 
-SDK 有[动态库](https://github.com/analysys-ea/EASDK)和[静态库](https://github.com/analysys-ea/EASDK-StaticLib)两种版本，您可以根据自身需要选择其中一种集成即可。
+SDK 为 Embeded目录结构如下
 
 * 动态库文件：
 
@@ -36,10 +36,10 @@ SDK 有[动态库](https://github.com/analysys-ea/EASDK)和[静态库](https://g
 AnalysysEasyTouch.framework
 ```
 
-* 静态库文件：
+* 包含的 framework：
 
 ```
-libea-ios-sdk-static.a
+EAKit.framework
 ```
 
 * 包含的头文件：
@@ -51,7 +51,7 @@ AnalysysEaConfig.h
 
 #### 注意事项
 
-**集成易达 SDK 前，需要先集成：[方舟 SDK 易达专用版](https://github.com/analysys-ea/UBASDK)，方舟 SDK 易达专用版为易达与方舟数据对接专属定制版，方舟 SDK 参考文档：[方舟 SDK 文档](https://docs.analysys.cn/ark/integration/sdk/ios)**
+**集成易达 SDK 前，需要先集成：**[**方舟 SDK 易达专用版**](https://github.com/analysys-ea/UBASDK)**，方舟 SDK 易达专用版为易达与方舟数据对接专属定制版，方舟 SDK 参考文档：**[**方舟 SDK 文档**](https://docs.analysys.cn/ark/integration/sdk/ios)
 
 ### 二、快速开始
 
@@ -72,31 +72,25 @@ pod 'AnalysysEasyTouch' // 易达 SDK
 * 如果需要安装指定版本，则按照以下方式
 
 ```
-pod 'AnalysysEasyTouch', '1.1.2' // 示例版本号
+pod 'AnalysysEasyTouch', '1.1.4' // 示例版本号
 ```
 
 * 特别注意：由于iOS 10以后苹果系统增加的 NSNotification Service Extension 扩展能够用于统计推送到达率，如果在 APP 中添加了该扩展而无法引入第三方的类文件，则需要使用以下“选择2”方式手动下载静态库并导入项目。将静态库及相关头文件添加到项目中的时候，需要同时勾选项目主 target 和 NSNotification Service Extension 扩展target，否则编译会报错。
 
-**方式 2：手动下载静态库导入**
+**方式 2：手动下载动态库导入**
 
-* [下载最新静态库 SDK](https://github.com/analysys-ea/EASDK-StaticLib)
+* [下载最新动态库 SDK](https://github.com/analysys-ea/EASDK)
 
-* 解压缩后，拷贝 ea-ios-sdk-static 文件夹中的静态库.a文件和对应的.h头文件到项目中
+* 解压缩后，拷贝 AnalysysEasyTouch.framework 文件到项目中
 
-* 选中项目 target ，在 Build Phases 》Link Binary With Libiaries 中检查对应的静态库.a文件是否已经添加，没有则需手动添加进去。
+* 选中项目 target ，在 Build Phases 》Embed frameworks 中添加 AnalysysEasyTouch.framework。
 
 #### 3、添加头文件
 
-* 如果使用的是动态库，在 AppDelegate.m 中引入以下头文件：
+* 1在 AppDelegate.m 中引入以下头文件：
 
 ```
 #import <AnalysysEasyTouch/AnalysysEaManager.h> // 易达 SDK
-```
-
-* 如果使用的是静态库，在 AppDelegate.m 中引入以下头文件：
-
-```
-#import "AnalysysEaManager.h" // 易达 SDK
 ```
 
 #### 4、添加初始化代码
@@ -126,7 +120,7 @@ config.applicationGroupIdentifier = @"App 创建的 App Groups ID";
 * 若您的 APP 支持远程推送功能，SDK 为您封装了苹果原生 APNS 远程推送注册接口
 
 ```
-// 注册 APNS 远程推送
+// 注册 APNS 远程推送（该方法可选，您也可以自行调用系统 API 注册远程推送）
 [AnalysysEasyTouch registerRemoteNotificationWithDelegate:self];
 ```
 
@@ -149,7 +143,7 @@ NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", hexToken);
 * 若 APP 支持推送功能，在收到推送及点击推送的系统回调方法中，添加对应的方法：
 
 ```
-// 以下系统回调方法仅供参考，具体实现根据您自己的业务需要
+// 以下系统回调方法仅供参考，具体实现根据您自己的业务需要，建议在实际测试中验证回调执行的方法
 
 // iOS 6 及以前，收到推送
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -194,7 +188,7 @@ completionHandler(UNNotificationPresentationOptionBadge
 
 #### 5、配置统计推送到达所需的 Notification Service Extension 扩展及 AppGroups
 
-配置这两项，主要针对 APP 支持推送，在进程被杀死的情况下统计推送到达率，若 APP 不支持推送功能，可忽略。若 APP 支持推送功能，不配置扩展和 AppGroups 会导致 APP 在进程被杀死的情况下推送到达无法统计，应用在前、后台的情况不受影响。建议您按照如下步骤进行配置。
+配置这两项，主要针对 APP 支持推送，在进程被杀死的情况下统计推送到达率，若 APP 不支持推送功能，可忽略。若 APP 支持推送功能，不配置扩展和 AppGroups 会导致 APP 在进程被杀死的情况下推送到达无法统计，并可能使其它功能受到影响，应用在前、后台的情况不受影响。建议您按照如下步骤进行配置。
 
 **配置 Notification Service Extension 扩展 **
 
@@ -220,7 +214,7 @@ self.contentHandler(self.bestAttemptContent);
 
 **配置 App Groups **
 
-为保证主 APP 进程被杀死的情况下，扩展进程能正常访问主 APP 的某些数据，从而使 SDK 能正常统计推送到达率，APP 客户端需要添加进程间数据共享：
+为保证主 APP 进程被杀死的情况下，扩展进程能正常访问主 APP 的某些数据，从而使 SDK 能正常工作，APP 客户端需要添加进程间数据共享：
 
 * 选择主 target -》 Capabilities，添加 App Groups，填入分组名 **group.xxx**，若分组名显示为红色，点击下方刷新按钮，直至分组名不再为红色
 
@@ -264,7 +258,7 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 * groupIdentifier
 
-* 由客户端创建的 App Groups 名称。
+* 由客户端创建的 App Groups 名称。若系统不支持推送，可传空字符串。
 
 **接口返回**
 
@@ -428,6 +422,8 @@ userId：1BCAF1D0-C8C0-46A8-866F-005832024259
 
 * 创建的 App Groups 分组 id 名称 : group.xxx
 
+* 若系统不支持推送，可传空字符串。
+
 **接口返回**
 
 无
@@ -515,7 +511,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 #### Archive 之后打包发布的时候报错，提示 IPA processing failed
 
-* 若出现这种错误，一般是因为引入的三方库中包含了 i386 x86\_64 armv7 arm64 四种架构，iOS 13 之后不支持 32 位架构，需要将 framework 中对应的 32 位架构删除即可，在命令行执行以下命令：
+* 若出现这种错误，一般是因为引入的三方库中包含了 i386 x86\_64 armv7 arm64 四种架构，真机打包时不支持模拟器架构，将 framework 中对应的模拟器架构（i386、x86\_64）删除即可。
+解决方式一：在命令行执行以下命令直接删除（缺点是模拟器将不能被支持）
 
 ```
 1.使用终端进入到SDK内部
@@ -529,6 +526,48 @@ Architectures in the fat file: AnalysysEasyTouch are: i386 x86\_64 armv7 arm64
 3.删掉i386，x86\_86架构
 lipo -remove i386 AnalysysEasyTouch -o AnalysysEasyTouch
 lipo -remove x86\_64 AnalysysEasyTouch -o AnalysysEasyTouch
+```
+
+解决方式二：Target -&gt; Build Phases -&gt; Add Run Script，添加以下脚本，并勾选 Run script only when installing（该选项意思是在 Archive 打包时才会执行脚本）
+
+```
+#!/bin/sh
+
+# Strip invalid architectures
+
+strip_invalid_archs() {
+binary="$1"
+echo "current binary ${binary}"
+# Get architectures for current file
+archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | rev)"
+stripped=""
+for arch in $archs; do
+if ! [[ "${ARCHS}" == *"$arch"* ]]; then
+if [ -f "$binary" ]; then
+# Strip non-valid architectures in-place
+lipo -remove "$arch" -output "$binary" "$binary" || exit 1
+stripped="$stripped $arch"
+fi
+fi
+done
+if [[ "$stripped" ]]; then
+echo "Stripped $binary of architectures:$stripped"
+fi
+}
+
+APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+
+# This script loops through the frameworks embedded in the application and
+# removes unused architectures.
+find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
+do
+FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+
+strip_invalid_archs "$FRAMEWORK_EXECUTABLE_PATH"
+done
+
 ```
 
 ### 六、技术支持
